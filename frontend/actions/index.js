@@ -1,31 +1,26 @@
-let nextTodoId = 0
-export const addTodo = (text) => {
-  return {
-    type: 'ADD_TODO',
-    id: nextTodoId++,
-    text
-  }
-}
-
-export const setVisibilityFilter = (filter) => {
-  return {
-    type: 'SET_VISIBILITY_FILTER',
-    filter
-  }
-}
-
-export const toggleTodo = (id) => {
-  return {
-    type: 'TOGGLE_TODO',
-    id
-  }
-}
+import { httpGet, httpPost } from '../utils/httpRequests'
 
 export const addField = (type) => {
-  return {
-    type: 'ADD_FIELD',
-    fieldType: type
-  }
+  // httpGet('http://localhost:3000/api/v1/forms')
+  // .then(
+  //   data => {
+  //     debugger
+  //   },
+  //   error => {
+  //     debugger
+  //   }
+  // );
+  // return {
+  //   type: 'ADD_FIELD',
+  //   fieldType: type
+  // }
+
+  httpPost('http://localhost:3000/api/v1/forms', {banana: 'boa'})
+  .then(
+    data => {
+      debugger
+    }
+  );
 }
 
 export const toggleEditField = (id) => {

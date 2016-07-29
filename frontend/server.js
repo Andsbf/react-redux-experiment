@@ -6,7 +6,7 @@ var config = require('./webpack.config')
 var express = require('express')
 var app = express()
 
-var port = 3000
+var port = 4000
 
 var compiler = webpack(config)
 app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output.publicPath }))

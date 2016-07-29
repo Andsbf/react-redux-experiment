@@ -7,7 +7,7 @@ import App from './components/App'
 import surveyApp from './reducers'
 
 const store = createStore(surveyApp)
-debugger;
+
 const rootElement = document.getElementById('root')
 render(
   <Provider store={store}>
